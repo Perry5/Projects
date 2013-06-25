@@ -5,7 +5,8 @@ import java.util.Scanner;
 /**
  * This program takes in a list of names, stores them
  * and gives you a pair of random names, until the list
- * is exhausted. 
+ * is exhausted.
+ * This is a crappy program, inefficient and wack. It did the job and I wrote it in a few minutes. Feel free to edit as you please 
  * @author Perry Ogwuche
  * @date 6/24/13
  *
@@ -38,20 +39,10 @@ public class Mixer {
 		
 		Random randomNumGenerator = new Random();
 		
-//		for(int i = 0; i<10; i++)
-//		{
-//			System.out.println(randomNumGenerator.nextInt(10));
-//		}
-		
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			System.out.println(names.get(randomNumGenerator.nextInt(9)) + " , " +  names.get(randomNumGenerator.nextInt(9)) );
-			
-		//	System.out.println("\n" +"The array now contains:" + "\n" + names);	
+		//Print out two randomly generated names from the arrayList and Take those names out of the list after they are printed
+		for(int i = 0; i<names.size()+1; i++)
+		    {
+			System.out.println(names.remove(randomNumGenerator.nextInt(names.size())) + " , " +  names.remove(randomNumGenerator.nextInt(names.size())));
+		    }
 	}
 }
