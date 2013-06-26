@@ -1,0 +1,249 @@
+package proj4;
+import java.util.ArrayList;
+
+/**
+ * @author Perry Ogwuche 
+ * @version April 16th 2011
+ * Class Invariants: 1. ID number must start at 10001
+ */
+public class DocumentStorageSystem {
+
+	// Creating and initializing the array list for the active and archive documents
+	private ArrayList <Document>  active = new  ArrayList <Document> ();
+	private ArrayList <Document> archive = new ArrayList <Document> ();
+
+	// Instantiating an instance variable for the the ID number, starting at 10001 each time a document is added
+	private int ID = 10000;
+
+
+	/**
+	 * Name: addDocument
+	 * Description: This method adds a specific document to the Document storage system. It takes in the 
+	 * 				document input by the user, and adds it to the list of active document and increments the 
+	 * 				ID number, giving the first document an ID number of 10001.
+	 * precondition: Takes a specific document as the parameter
+	 * postcondition: Returns true when a document is added to the list.
+	 */
+	public boolean addDocument(Document d)
+	{
+		Document doc = d;
+		(ID)++;
+		doc.setID(ID);
+
+		active.add(doc);
+
+		return true;
+
+	}
+
+
+	/**
+	 * Name: displayDocument
+	 * Description: This method displays a document specified by the user, using the ID number, if the active
+	 * 				document list is not empty. 
+	 * precondition: Takes in the ID number specified by the user to be displayed.
+	 * postcondition: Displays the specified document if it exist in the list, or prints out a message indicating
+	 * 				  that the list is empty if is it.
+	 */
+	public void displayDocument(int ID)
+	{
+		if(!(active.isEmpty()))
+		{
+			for(int i = 0; i< active.size(); i++)
+			{
+				if(active.get(i).getID() == ID)
+				{
+					System.out.print(active.get(i).toString());
+					System.out.print(active.get(i).getTextBody());
+				}
+			}
+		}else
+		{
+			System.out.println("There are no active documents in the system");
+
+		}
+	}
+
+	/**
+	 * Name: displayAllActiveDocument
+	 * Description: This method displays all the active documents in the active list if the list is not empty.
+	 * 				
+	 * precondition: There have to be documents in the active document list
+	 * postcondition: Displays all the documents in the active document list or displays a message indicating
+	 * 				  that the active document list is empty.
+	 */
+	public void displayAllActiveDocument()
+	{
+		if(!(active.isEmpty()))
+		{
+			System.out.println("Active Document List: ");
+			for(int i = 0; i< active.size(); i++)
+			{
+				System.out.println();
+				System.out.println(active.get(i).toString());
+			}
+
+		}else
+		{
+			System.out.println("Active Document List is empty. ");
+		}
+	}
+
+	/**
+	 * Name: archiveDocument
+	 * Description: This method removes a document specified by the user from the active document list and 
+	 * 				transfers it to the archive list. 
+	 * precondition: Takes in the ID number of the document in the active list to be archived. 
+	 * postcondition: Removes the specified document from the active document list and places it in the archive.
+	 * 				  Or displays a message indicating that the active list is empty if it is.
+	 */
+	public void archiveDocument(int ID)
+	{
+		if(!(active.isEmpty()))
+		{
+			for(int i = 0; i < active.size(); i++)
+			{
+
+				if(active.get(i).getID() == ID)
+				{
+					archive.add(active.get(i));
+					active.remove(i);
+					System.out.println("Document #" + ID + " is now archived");
+				}
+
+			}
+		}else{
+			System.out.println("There are no active documents in the system to be archieved");
+		}
+
+	}
+
+	/**
+	 * Name: retrieveArchive
+	 * Description: This method allows the user to retrieve an archived document.   
+	 * precondition: Takes in the parameter the ID number of the document in the archived list to be made active.
+	 * postcondition: Removes a document from the archive list and puts it in the active document list. 
+	 */
+	public void retrieveArchive(int ID)
+	{
+		if(!(archive.isEmpty()))
+		{
+			for(int i = 0; i< archive.size(); i++)
+			{
+				if(archive.get(i).getID() == ID)
+				{
+					active.add(archive.get(i));
+					archive.remove(i);
+					System.out.println("Document #"+ ID + "  has been placed back into the active list");
+				}
+			}
+		}else
+		{
+			System.out.println("There are no document in the archive list");
+		}
+	}
+
+	/**
+	 * Name: displayAllArchiveDocuments
+	 * Description: This method allows the user to display all the archived documents in the Document  
+	 * 				Storage System.   
+	 * precondition: There has to be at least one archived document in the archive document list. 
+	 * postcondition:Displays the document(s) in the archive document list or displays a message indicatinng
+	 * 				 that the archive list is empty. 
+	 */
+	public void displayAllArchivedDocuments()
+	{
+		if(!(archive.isEmpty()))
+		{
+			ArrayList <Document> newArchive = new ArrayList <Document>();
+			
+			for(int i = 0; i< archive.size(); i++)
+			{
+				newArchive.add(archive.get(i));
+			}
+			
+			System.out.println("Archive Document List: ");
+			while(newArchive.size()!=0)
+			{
+				int currentDocumentId = newArchive.get(0).getID();
+				int index = 0;
+			
+			for(int i = 0; i< newArchive.size(); i++)
+			{
+				if(newArchive.get(i).getID() < currentDocumentId){
+					currentDocumentId = newArchive.get(i).getID();
+					index = i;
+					i = 0;
+				}
+				
+				System.out.println();
+				System.out.println(newArchive.get(index).toString());
+				newArchive.remove(index);
+			}
+
+		}
+		}else
+		{
+			System.out.println("There are no archived documents in the system ");
+		}
+	}
+
+
+	/**
+	 * Name: clearArchive
+	 * Description: This method clears the archive list of documents when implemented. It deletes all the 
+	 * 				archived documents of the document storage system.
+	 * precondition: There have to be at least one document in the list. 
+	 * postcondition: Deletes all the documents from the archive list, or displays a message indicating the list
+	 * 				  is empty
+	 */
+	public void clearArchive()
+	{
+		if(!(archive.isEmpty()))
+		{
+			for(int i = 0; i< archive.size(); i++)
+			{
+				archive.clear();
+				System.out.println("Archive has been cleared");
+			}
+		}else
+		{
+			System.out.println("Archive is already empty");
+		}
+	}
+
+
+	/**
+	 * Name: locatePhrase 
+	 * Description: This method takes in an argument from the user in form of a string, and tries to locate
+	 * 				the documents in the DSS that contain that particular word or phrase and displays their ID
+	 * 				number. 
+	 * precondition: Input from the user must be read in form of a string. 
+	 * postcondition: Displays documents ID number that contain that particular word or phrase. 
+	 */
+	public void locatePhrase(String phrase)
+	{
+		ArrayList <Integer> IDnums = new ArrayList <Integer>();
+		for(int i = 0; i< active.size(); i++)
+		{
+			String text = active.get(i).getTextBody();
+			if(text.toUpperCase().contains(phrase.toUpperCase()))
+			{
+				IDnums.add(active.get(i).getID());
+			}
+		}
+		
+		if(!(IDnums.isEmpty()))
+		{
+			for(int i = 0; i < IDnums.size(); i++)
+			{
+				System.out.println(IDnums.get(i));
+			}
+		}
+		
+		if(IDnums.isEmpty())
+		{
+			System.out.println("Word/phrase found no where in the document storage system");
+		}
+	}
+}
