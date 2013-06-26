@@ -1,0 +1,119 @@
+package proj4;
+import java.util.Date;
+
+/**
+ * @author Perry Ogwuche
+ * @version April 16th 2011
+ * Class invariants: 
+ * 
+ */
+public abstract  class Document implements Comparable <Document>{
+
+	
+	// Instance variables for the document class. Including the date creating a new date object
+	private String author;
+	private Date date = new Date();
+	private int ID;
+	private String textBody;
+
+	
+	/**
+	 * Name: document
+	 * Description: This is the document constructor, it takes in the author and ID number of a document
+	 * 				and initializes the instance variables.
+	 * @param author
+	 * @param textBody
+	 * @param ID
+	 */
+	public Document(String author, String textBody, int ID)
+	{
+		this.author = author;
+		this.textBody = textBody;
+		this.ID = ID;
+	}
+
+
+	/**
+	 * 
+	 * Name: getAuthor
+	 * Description: Getter for the author, it gets the author's instance variable and returns the string
+	 * postcondition: Returns the author as a string.
+	 */
+	public String getAuthor()
+	{
+		return author;
+	}
+
+	
+	/**
+	 * 
+	 * Name: getID
+	 * Description: Gets the ID for the document class
+	 * postcondition: Returns the ID.
+	 */
+	public int getID()
+	{
+		return ID;
+	}
+	
+	
+	/**
+	 * Name: getTextBody
+	 * Description: Gets the text body for the document class.
+	 * postcondition: Returns the ID.
+	 */
+	public String getTextBody()
+	{
+		return textBody;
+	}
+	
+	/**
+	 * 
+	 * Name: setID
+	 * Description: This method sets the ID number for a specific document when it is created.  
+	 * precondition: Have to take in an ID number from the user to be set. 
+	 * postcondition: sets this ID to what ever ID the user specifies.
+	 */
+	public void setID(int ID)
+	{
+		this.ID = ID;
+		
+	}
+	
+	/**
+	 * Name: toString
+	 * Description: This method prints a string representation of the input given by the user, in the
+	 * 				following order: Document number, Date and Author. 
+	 * postcondition: Returns the string representation of the user's input. 
+	 */
+	public String toString()
+	{
+		String information = "";
+		information += "Document #: "  + ID ;
+		information += "\nDate: "+ date;
+		information += "\nAuthor: " + author;
+		
+		return information;
+	}
+
+	
+	/**
+	 * Name: compareTo
+	 * Description: This method compares the ID numbers of different documents and uses it to help sort
+	 * 				the list of documents when they are displayed. 
+	 */
+	public int compareTo(Document other) 
+	{
+		Integer x = this.getID();
+		Integer y = other.getID();
+		
+		int result = x.compareTo(y);
+		if(result < 0 || result > 0)
+		{
+			return result;
+		}else
+		{
+			return x.compareTo(other.ID) ;
+		}
+	}
+}

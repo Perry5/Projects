@@ -1,0 +1,51 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.eclipse.wst.web,1.1.403.v201103081400,"org.eclipse.wst.web",1372184981530
+os,sysinfo,,,"macosx",1372184981533
+arch,sysinfo,,,"x86_64",1372184981533
+ws,sysinfo,,,"cocoa",1372184981533
+locale,sysinfo,,,"en_US",1372184981533
+processors,sysinfo,,,"4",1372184981533
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1372184981533
+java.runtime.version,sysinfo,,,"1.6.0_45-b06-451-11M4406",1372184981533
+java.specification.name,sysinfo,,,"Java Platform API Specification",1372184981533
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1372184981533
+java.specification.version,sysinfo,,,"1.6",1372184981533
+java.vendor,sysinfo,,,"Apple Inc.",1372184981533
+java.version,sysinfo,,,"1.6.0_45",1372184981533
+java.vm.info,sysinfo,,,"mixed mode",1372184981533
+java.vm.name,sysinfo,,,"Java HotSpot(TM) 64-Bit Server VM",1372184981533
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1372184981533
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1372184981533
+java.vm.specification.version,sysinfo,,,"1.0",1372184981533
+java.vm.vendor,sysinfo,,,"Apple Inc.",1372184981533
+java.vm.version,sysinfo,,,"20.45-b01-451",1372184981533
+started,bundle,org.eclipse.m2e.usagedata,1.0.0.201106061504,"org.eclipse.m2e.usagedata",1372184981578
+started,bundle,org.eclipse.rse.services,3.2.200.201211090626,"org.eclipse.rse.services",1372184981714
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.101.r362_v20101117-0800,"org.eclipse.ltk.core.refactoring",1372184981717
+started,bundle,org.eclipse.ltk.ui.refactoring,3.5.0.v20100526-0800,"org.eclipse.ltk.ui.refactoring",1372184981778
+started,bundle,org.eclipse.rse.core,3.3.2.201301152246,"org.eclipse.rse.core",1372184981859
+started,bundle,org.eclipse.rse.ui,3.3.3.201302122026,"org.eclipse.rse.ui",1372184982567
+started,bundle,org.eclipse.wst.server.core,1.1.208.v20110914_1539,"org.eclipse.wst.server.core",1372184982865
+started,bundle,org.eclipse.jsch.core,1.1.200.I20100505-1245,"org.eclipse.jsch.core",1372184983395
+started,bundle,org.eclipse.team.cvs.core,3.3.301.R36x_v20110119-0815,"org.eclipse.team.cvs.core",1372184983464
+started,bundle,org.eclipse.rse.subsystems.shells.core,3.1.300.201205141739,"org.eclipse.rse.subsystems.shells.core",1372184983589
+started,bundle,org.eclipse.rse.subsystems.shells.local,2.1.400.201205062159,"org.eclipse.rse.subsystems.shells.local",1372184983601
+started,bundle,org.eclipse.wst.server.ui,1.1.209.v20110914_1539,"org.eclipse.wst.server.ui",1372184983921
+started,bundle,org.eclipse.team.ui,3.5.102.R36x_v20110203-1036,"org.eclipse.team.ui",1372184983956
+started,bundle,org.eclipse.rse.connectorservice.local,2.1.400.201205062159,"org.eclipse.rse.connectorservice.local",1372184984006
+started,bundle,org.eclipse.rse.services.local,2.1.401.201302062104,"org.eclipse.rse.services.local",1372184984029
+started,bundle,org.jboss.tools.jmx.core,1.2.0.v20111025-2055-H161-Final,"org.jboss.tools.jmx.core",1372184984216
+started,bundle,org.eclipse.wst.common.frameworks,1.2.1.v201107271600,"org.eclipse.wst.common.frameworks",1372184984259
+started,bundle,org.eclipse.team.cvs.ui,3.3.302.R36x_v20110203-1036,"org.eclipse.team.cvs.ui",1372184984452
+started,bundle,org.jboss.tools.esb.project.core,1.4.1.v20111111-0222-H200-Final,"org.jboss.tools.esb.project.core",1372184984842
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.201.v201108161900,"org.eclipse.jst.common.project.facet.core",1372184985125
+started,bundle,org.jboss.ide.eclipse.as.core,2.2.0.v20111110-1751-H262-Final,"org.jboss.ide.eclipse.as.core",1372184985171
+started,bundle,org.jboss.ide.eclipse.as.ui,2.2.0.v20111110-1751-H262-Final,"org.jboss.ide.eclipse.as.ui",1372184985238
+started,bundle,org.jboss.tools.common,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common",1372184985424
+started,bundle,org.jboss.tools.common.model,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.model",1372184985885
+started,bundle,org.jboss.tools.runtime,1.2.0.v20111025-0316-H469-Final,"org.jboss.tools.runtime",1372184985885
+started,bundle,org.jboss.tools.runtime.ui,1.0.0.v20111025-0316-H469-Final,"org.jboss.tools.runtime.ui",1372184985934
+started,bundle,org.jboss.tools.usage,1.0.1.v20111025-0334-H157-Final,"org.jboss.tools.usage",1372184985953
+started,bundle,org.jboss.tools.jst.web.ui,3.2.1.v20111025-0510-H215-Final,"org.jboss.tools.jst.web.ui",1372184986217
+started,bundle,org.jboss.tools.common.projecttemplates,3.2.1.v20111025-0439-H174-Final,"org.jboss.tools.common.projecttemplates",1372184987431
+started,bundle,org.jboss.tools.jst.web,3.2.1.v20111025-0510-H215-Final,"org.jboss.tools.jst.web",1372184987806
